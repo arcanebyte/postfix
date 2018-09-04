@@ -1,0 +1,6 @@
+# Defines domain name <-> UUCP host forwarding. This configuration
+# sends mail for `arcanebyte.com` users to the `ulisa` host and logs in
+# using the `uucp` username.
+
+arcanebyte.com          uucp:ulisa
+.arcanebyte.com         uucp:ulisa

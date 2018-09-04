@@ -1,0 +1,21 @@
+# Attempts to remove some of the headers from received mail. The
+# UniPlus mail client is not the friendliest.
+
+/^From:/                OK
+/^To:/                  OK
+/^Subject:/             OK
+/^*:/			IGNORE
+/^X-*/                  IGNORE
+/^X-Originating-IP:/    IGNORE
+/^X-Mailer:/            IGNORE
+/^Mime-Version:/        IGNORE
+/^DKIM-Signature:/      IGNORE
+/^X_CMAE_Category:/     IGNORE
+/^X-CNFS-Analysis:/     IGNORE
+/^X-CM-Score:/          IGNORE
+/^X-Scanned-by:/        IGNORE
+/^X-Authed-Username:/   IGNORE
+/^Authentication-Results:/  IGNORE
+/^X-Status:/            IGNORE
+/^X-Keywords:/          IGNORE
+/^X-UID:/               IGNORE

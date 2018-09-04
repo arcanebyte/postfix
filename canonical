@@ -1,0 +1,6 @@
+# UniPlus/UUCP mail does not provide an FQDN. We must convert the hostname
+# to our domain, otherwise the relay will kick it back. This will need to
+# be done for every user (there may be wildcard functionality - TBD)
+
+sapient@ulisa	sapient@arcanebyte.com
+james@ulisa	james@arcanebyte.com

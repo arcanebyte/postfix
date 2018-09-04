@@ -1,0 +1,32 @@
+myhostname = mail.arcanebyte.com
+
+alias_maps = hash:/etc/aliases
+alias_database = hash:/etc/aliases
+
+myorigin = $mydomain
+append_dot_mydomain = no
+
+mynetworks = 127.0.0.0/8 [::ffff:127.0.0.0]/104 [::1]/128
+mailbox_size_limit = 0
+recipient_delimiter = +
+inet_interfaces = all
+
+# relayhost is necessary for many home ISPs
+relayhost = [mail.twc.com]:587
+
+# sasl may be required for many home ISPs
+smtp_sasl_auth_enable = yes
+smtp_sasl_security_options = noanonymous
+smtp_sasl_password_maps = hash:/etc/postfix/sasl_passwd
+smtp_use_tls = yes
+smtp_generic_maps = hash:/etc/postfix/generic
+
+transport_maps = hash:/etc/postfix/transport
+relay_domains = arcanebyte.com
+
+canonical_maps = hash:/etc/postfix/canonical
+
+mime_header_checks = regexp:/etc/postfix/header_checks
+header_checks = regexp:/etc/postfix/header_checks
+nested_header_checks = regexp:/etc/postfix/header_checks
+body_checks = regexp:/etc/postfix/header_checks
